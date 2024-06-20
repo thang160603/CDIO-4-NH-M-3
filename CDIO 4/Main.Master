@@ -12,80 +12,681 @@
     <title>TikiTaka</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="~/CSS1/layout.css">
+    <link rel="stylesheet" href="css/main.css" />
+   <%-- JAVASCRIPT--%>
+    <%--<script src="<%= ResolveUrl("~/javascript /main.js") %>" type="text/javascript"></script> <script src="javascript/main.js"></script>--%>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="trangchu.aspx"><b>TikiTaka</b></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-primary" href="" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Điện Thoại
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Iphone</a></li>
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">Xiaomi</a></li>
-                            <li><a class="dropdown-item" href="#">Oppo</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-info" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Máy Tính
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Delll</a></li>
-                            <li><a class="dropdown-item" href="#">MacBook</a></li>
-                            <li><a class="dropdown-item" href="#">Acer</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Máy tính khác...</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-success" aria-current="page" href="#">Phụ Kiện</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-danger" aria-current="page" href="#">Giày&Dép</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-warning" aria-current="page" href="#">Đồ Gia Dụng </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-secondary" aria-current="page" href="#">Liên Hệ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-secondary" aria-current="page" href="register.aspx">Đăng Kí </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-secondary" aria-current="page" href="login.aspx">Đăng Nhập  </a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-danger" type="submit">Search</button>
-                </form>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        
+  <header>
+    <img src="images/aaa.jpg" alt="">
+  </header>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href=""><img style="width: 70px"  src="images/logo.png" alt=""></a></li>
+        <li id="adress-form"><a href="#">Đà Nẵng<i class="fas fa-sort-down"></i></a> </li>
+        <li><input type="text" placeholder="Bạn tìm gì"><i class="fas fa-search"></i></li>
+        <li id="adress-cart"><a href="#"></a><button><i class="fas fa-shopping-cart"></i>Giỏ Hàng</button></li>
+        <li id="adress-history"><a href="#">Lịch sử đơn hàng</a></li>
+        <li id="adress-help"><a href="#">Liên hệ hỗ trợ</a></li>
+        <li id="adress-thongbao"><a href="#">Thông báo</a></li>
+        <li id="adress-login"><a href="#">Tài Khoản</a></li>
+        <li id="adress-regisrt"><a href="#">Đăng Kí Sản Phẩm Bán</a></li>
+          <div class="adress-form">
+            <div class="adress-form-content">
+              <h2>Chọn địa chỉ nhận hàng<span id="adress-close"> Đóng </span> </h2>
+              <form action="">
+                <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao</p>
+                <select name="" id="">
+                  <option value="#">--Chọn địa điểm--</option>
+                  <option value="#">Đà Nẵng</option>
+                </select>
+                <select name="" id="">
+                  <option value="#">--Chọn Quận\Huyện--</option>
+                  <option value="#">Liên Chiểu</option>
+                  <option value="#">Thanh Khê</option>
+                  <option value="#">Hải Châu</option>
+                  <option value="#">Sơn Trà</option>
+                  <option value="#">Cẩm Lệ</option>
+                  <option value="#">Ngũ Hành Sơn</option>
+                  <option value="#">Hải Châu</option>
+                  <option value="#">Hòa Vang</option>
+                </select>
+                <select name="" id="">
+                  <option value="#">--Chọn Phường\Xã--</option> 
+                  <option value="#">Hòa Khách Bắc</option>
+                  <option value="#">Hòa Khách Nam</option>
+                  <option value="#">Hòa Minh</option>
+                  <option value="#">Hòa Hiệp Bắc</option>
+                  <option value="#">Hòa Hiệp Nam</option>
+                  <option value="#">Hòa Khách Bắc</option>
+                  <option value="#">Xuân Hà</option>
+                  <option value="#">Thanh Khê Tây</option>
+                  <option value="#">Thanh Khê Đông</option>
+                  <option value="#">Thạc Gián</option>
+                  <option value="#">Chính Gián</option>
+                  <option value="#">Hòa Cường Bắc</option>
+                  <option value="#">Hòa Cường Nam</option>
+                  <option value="#">Hải Châu I</option>
+                  <option value="#">Hải Châu II</option>
+                  <option value="#">Hòa Thuận Tây</option>
+                  
+                </select>
+                <input type="text"placeholder="Số nhà, Tên đường">
+                <button>Xác nhận</button>
+              </form>
             </div>
-        </div>
-    </nav>
+          </div> 
+          <div class="adress-regisrt">
+            <div class="adress-regisrt-content">
+              <h2>Đăng Kí Sản Phẩm Bán<span id="adress-close1"> Đóng </span> </h2>
+              <form action="">
+        
 
+                <Label for="hinhAnhSanPham">Hình Ảnh Sản Phẩm</Label>
+                <input type="text" id="hinhAnhSanPham"> 
+                <Label for="tenSanPham">Tên Sản Phẩm</Label>
+                <input type="text" id="tenSanPham">
+
+                <Label for="giaSanPham">Giá Sản Phẩm</Label>
+                <input type="number" id="giaSanPham">
+
+                <Label for="tinhTrangSanPham">Tình Trang Sản Phẩm</Label>
+                <input type="text" id="tinhTrangSanPham">
+                <div class="btn-tao">
+                  <button onclick="onClickTaoSanPham()">Tạo Sản Phẩm</button>
+                </div>
+                  
+                <p id="hien-thi-san-pham"> Hiển Thị Sản Phẩm</p>
+                <div id="hien-thi-danh-sach-san-pham">
+                </div>       
+              </form>
+              <script>
+                  function onClickTaoSanPham() {
+                      var nodeHinhAnhSanPham = document.getElementById('hinhAnhSanPham');
+                      console.log(nodeHinhAnhSanPham);
+                      var hinhAnhSanPham = nodeHinhAnhSanPham.value;
+                      console.log('hinh anh san pham la :' + hinhAnhSanPham);
+                      var nodeTenSanPham = document.getElementById('tenSanPham');
+                      console.log(nodeTenSanPham);
+                      var tenSanPham = nodeTenSanPham.value;
+                      console.log('ten san pham la :' + tenSanPham);
+                      var nodetinhTrangSanPham = document.getElementById('tinhTrangSanPham');
+                      console.log(nodetinhTrangSanPham);
+                      var tinhTrangSanPham = nodetinhTrangSanPham.value;
+                      console.log('tinh trang san pham la :' + tinhTrangSanPham);
+                      var nodeGiaSanPham = document.getElementById('giaSanPham');
+                      console.log(nodeGiaSanPham);
+                      var giaSanPham = nodeGiaSanPham.value;
+                      console.log('gia san pham la :' + giaSanPham);
+                      var nodeHienThiSanPham = document.getElementById('hien-thi-san-pham');
+                      console.log(nodeHienThiSanPham);
+                      var html = " ";
+                      html += '<div class="san-pham">';
+                      html += '<div class="hinh-anh-san-pham">';
+                      html += '<img src="' + hinhAnhSanPham + '" alt="" srcset=""></div>';
+                      html += '<h1 class="ten-san-pham">' + tenSanPham + '</h1>';
+                      html += '<p class="gia-san-pham">' + giaSanPham + 'đ</p>';
+                      html += '<p class="tinh-trang-san-pham">' + tinhTrangSanPham + '</p>';
+                      html += '<button class="btn">Thêm Vào Giỏ Hàng</button>';
+                      html += '</div>';
+
+                      nodeHienThiSanPham.innerHTML = html;
+                      // var htmlDanhSachSanPham= '';
+                      // for(var i = 0;i<10;i++){
+                      //     htmlDanhSachSanPham=htmlDanhSachSanPham+html;
+                      // }
+                      console.log(htmlDanhSachSanPham);
+                      var nodeHienThiDanhSachSanPham = document.getElementById('hien-thi-danh-sach-san-pham');
+                      nodeHienThiDanhSachSanPham.innerHTML = htmlDanhSachSanPham;
+                  }
+              </script>
+            </div>
+          </div>
+          <div class="adress-login">
+            <div class="adress-login-content">
+              <h2>Tài Khoản<span id="adress-close2"> Đóng </span> </h2>
+              <form action="">
+                <div class="adress-login-button">
+                 <button>Thông Tin Tài Khoản</button>
+                 <button>Địa Chỉ Nhận Hàng</button>
+                 <button>Đăng Xuất</button>
+                </div>
+              </form>
+            </div>
+          </div> 
+          <div class="adress-cart">
+            <div class="adress-cart-content">
+              <h2>Danh sách hàng trong giỏ<span id="adress-close3"> Đóng </span> </h2>
+              <form action="">
+                <div class="gio-hang" id="gio-hang">
+    <h1 class="tieuDe"></h1>
+    <div class="item-gio-hang tieuDeItemGioHang"  >
+        <div class="hinhAnh">
         </div>
-    </form>
-</body>
+        <p class="ten">Tên Sản Phẩm</p>
+        <div class="gia">
+           Đơn Giá
+        </div>
+        <p class="soluong">Số Lượng</p>
+        <p class="tongTien">Tổng Tiền</p>
+        <div class="hanhDong">
+            <p>Xóa Sản Phẩm</p>
+        </div>
+    </div>
+     
+  </div>
+  <div class="gio-hang">
+    <div class="item-gio-hang">
+        <div class="hinhAnh">
+            <img src="images/book1.jpg">
+        </div>
+        <p class="ten">Sách Đắc Nhân Tâm</p>
+        <div class="gia">
+            <span class="giaBan">400.000đ</span>
+        </div>
+        <input type="number" class="soluong" value="1">
+        <p class="tongTien">400.000đ</p>
+        <div class="hanhDong">
+            <i class="fa-solid fa-trash"></i>
+        </div>
+  </div>
+  </div>
+              </form>
+            </div>
+          </div> 
+          <div class="adress-thongbao">
+            <div class="adress-thongbao-content">
+              <h2>Thông Báo<span id="adress-close4"> Đóng </span> </h2>
+              <form action="">
+                <p> Bạn chưa có thông báo nào </p>
+                
+                <!-- <button>Đặt Hàng</button> -->
+              </form>
+            </div>
+          </div> 
+          <div class="adress-help">
+            <div class="adress-help-content">
+              <h2>Hỗ trợ<span id="adress-close5"> Đóng </span> </h2>
+              <form action="">
+                <p> vui lòng liên hệ: 090909099 </p>
+                
+                <!-- <button>Đặt Hàng</button> -->
+              </form>
+            </div>
+          </div> 
+          <div class="adress-history">
+            <div class="adress-history-content">
+              <h2>Lịch sử đơn hàng<span id="adress-close6"> Đóng </span> </h2>
+              <form action="">
+                <p> Bạn chưa có sản phẩm nào </p>
+                
+                <!-- <button>Đặt Hàng</button> -->
+              </form>
+            </div>
+          </div> 
+      </ul>
+
+    </div>
+  </nav>
+    <!-- ------------------------------------------------------ -->
+    <section class="menu-bar">
+      <div class="container">
+        <div class="menu-bar-content">
+          <ul> 
+            <li><a href=""><i class="fas fa-bars"></i>Danh mục sản phẩm<i style="font-size: 25px"></i></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="Book.aspx">Đồ Gia Dụng </a></li>
+                  <li><a href="">Điện Thoại </a></li>
+                  <li><a href="">Laptop</a></li>
+                  <li><a href="">Phụ Kiện Điện Thoại </a></li>
+                  <li><a href="">Sách Giáo Khoa </a></li>
+                  <li><a href="">Sách Thiếu Nhi</a></li>
+                  <li><a href="">Sách Ngoại Ngữ</a></li>
+                  <li><a href="">Giày&Dép</a></li>
+                  
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+        </div>
+</form>
+  </body>
+    <br>
+<section class="product-gallery-one">
+  <div class="container">
+    <div class="product-gallery-one-content">
+      <div class="product-gallery-one-content-title">
+        <h2>Sản Phẩm Nổi Bật</h2><br>
+        <ul>
+          <li><a href="">Iphone 15 Pro Max 512GB</a></li>
+          <li><a href="">Laptop Acer Nitro V 16GB</a></li>
+          <li><a href="">Giày Da Nam</a></li>
+          <li><a href="">Xem tất cả</a></li>
+        </ul>
+        <br>
+      </div>
+      <div class="product-gallery-one-content-product">
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book1.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Iphone 12 Pro Max </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book2.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Iphone 15 Pro Max  </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book3.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>WARREN BUFETT </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book4.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Dương Hồng </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book5.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Nguyễn Nhật Ánh </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book6.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>DORAEMON </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book7.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>CONAN </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book8.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Trạng Quỳnh </li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book9.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Nguyễn Nhật Ánh</li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book10.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Nguyễn Nhật Ánh</li>
+            <li>online giá rẻ</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <!-- <li>Quà 10.000<sup>đ</sup></li> -->
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <!-- <i class="fas fa-star"></i> -->
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<br>
+<br>
+
+<br>
+<section class="product-gallery-one">
+  <div class="container">
+    <div class="product-gallery-one-content">
+      <div class="product-gallery-one-content-title">
+        <h2>SÁCH THAM KHẢO-GIÁO KHOA</h2><br>
+        <ul>
+          <li><a href="">Sách Tham Khảo Lớp 10</a></li>
+          <li><a href="">Sách Tham Khảo Lớp 11</a></li>
+          <li><a href="">Sách Tham Khảo Lớp 12</a></li>
+          <li><a href="">Xem tất cả</a></li>
+        </ul>
+        <br>
+      </div>
+      <div class="product-gallery-one-content-product">
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book1.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Đắc Nhân Tâm </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book2.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Trí Tuệ Do Thái </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book3.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>WARREN BUFETT </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book4.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Dương Hồng </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book5.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Nguyễn Nhật Ánh </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book6.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>DORAEMON </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book7.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>CONAN </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book8.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Trạng Quỳnh </li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book9.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Nguyễn Nhật Ánh</li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+        <div class="product-gallery-one-content-product-item">
+          <img src="images/book10.jpg" alt="">
+          <div class="product-gallery-one-content-product-item-text">
+            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Nguyễn Nhật Ánh</li>
+            <li>Tình trạng sách: 100%</li>
+            <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
+            <li>100.000<sup>đ</sup></li>
+            <li>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </li>
+            <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 </html>
