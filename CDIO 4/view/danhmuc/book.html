@@ -701,7 +701,7 @@
                 }
 
             .adress-form-content form p {
-                font-size: 16px;
+                font-size: 25px;
             }
 
             .adress-form-content form input, select {
@@ -842,11 +842,14 @@
     </style>
 </head>
 <body>
+    <header>
+        <!--<%--<img src="images/logo.png" alt="">--%>-->
+    </header>
     <nav>
         <div class="container">
             <ul>
-                <li><a href="trangchu.aspx"><img style="width: 70px" src="/view/images1/logo.png" alt=""></a></li>
-                <li id="adress-form"><a href="#">Đà Nẵng<i class="fas fa-sort-down"></i></a> </li>
+                <li><a href="trangchu.aspx src="view/images1/logo.png" alt=""></a></li>
+                <li id="adress-form"><a href="/trangchu.aspx">TikiTaka<i class="fas fa-sort-down"></i></a> </li>
                 <li><input type="text" placeholder="Bạn tìm gì"><i class="fas fa-search"></i></li>
                 <li id="adress-cart"><a href="#"></a><button><i class="fas fa-shopping-cart"></i>Giỏ Hàng</button></li>
                 <li id="adress-history"><a href="#">Lịch sử đơn hàng</a></li>
@@ -902,67 +905,6 @@
                 <div class="adress-regisrt">
                     <div class="adress-regisrt-content">
                         <h2>Đăng Kí Sản Phẩm Bán<span id="adress-close1"> Đóng </span> </h2>
-                        <form action="">
-
-
-                            <Label for="hinhAnhSanPham">Hình Ảnh Sản Phẩm</Label>
-                            <input type="text" id="hinhAnhSanPham">
-                            <Label for="tenSanPham">Tên Sản Phẩm</Label>
-                            <input type="text" id="tenSanPham">
-
-                            <Label for="giaSanPham">Giá Sản Phẩm</Label>
-                            <input type="number" id="giaSanPham">
-
-                            <Label for="tinhTrangSanPham">Tình Trang Sản Phẩm</Label>
-                            <input type="text" id="tinhTrangSanPham">
-                            <div class="btn-tao">
-                                <button onclick="onClickTaoSanPham()">Tạo Sản Phẩm</button>
-                            </div>
-
-                            <p id="hien-thi-san-pham"> Hiển Thị Sản Phẩm</p>
-                            <div id="hien-thi-danh-sach-san-pham">
-                            </div>
-                        </form>
-                        <script>
-                function onClickTaoSanPham(){
-                    var nodeHinhAnhSanPham = document.getElementById('hinhAnhSanPham');
-                    console.log(nodeHinhAnhSanPham);
-                    var hinhAnhSanPham=nodeHinhAnhSanPham.value;
-                    console.log('hinh anh san pham la :' + hinhAnhSanPham);
-                    var nodeTenSanPham = document.getElementById('tenSanPham');
-                    console.log(nodeTenSanPham);
-                    var tenSanPham=nodeTenSanPham.value;
-                    console.log('ten san pham la :' + tenSanPham);
-                    var nodetinhTrangSanPham = document.getElementById('tinhTrangSanPham');
-                    console.log(nodetinhTrangSanPham);
-                    var tinhTrangSanPham=nodetinhTrangSanPham.value;
-                    console.log('tinh trang san pham la :' + tinhTrangSanPham);
-                    var nodeGiaSanPham = document.getElementById('giaSanPham');
-                    console.log(nodeGiaSanPham);
-                    var giaSanPham=nodeGiaSanPham.value;
-                    console.log('gia san pham la :' + giaSanPham);
-                    var nodeHienThiSanPham=document.getElementById('hien-thi-san-pham');
-                    console.log(nodeHienThiSanPham);
-                    var html = " ";
-                html += '<div class="san-pham">';
-                html += '<div class="hinh-anh-san-pham">';
-                html += '<img src="'+hinhAnhSanPham+'" alt="" srcset=""></div>';
-                html += '<h1 class="ten-san-pham">'+tenSanPham+'</h1>';
-                html += '<p class="gia-san-pham">'+giaSanPham+'đ</p>';
-                html += '<p class="tinh-trang-san-pham">'+tinhTrangSanPham+'</p>';
-                html += '<button class="btn">Thêm Vào Giỏ Hàng</button>';
-                html += '</div>';
-
-                nodeHienThiSanPham.innerHTML=html;
-                // var htmlDanhSachSanPham= '';
-                // for(var i = 0;i<10;i++){
-                //     htmlDanhSachSanPham=htmlDanhSachSanPham+html;
-                // }
-                console.log(htmlDanhSachSanPham);
-                var nodeHienThiDanhSachSanPham=document.getElementById('hien-thi-danh-sach-san-pham');
-                nodeHienThiDanhSachSanPham.innerHTML=htmlDanhSachSanPham;
-               }
-                        </script>
                     </div>
                 </div>
                 <div class="adress-login">
@@ -1105,9 +1047,9 @@
             </div>
             <div class="product-gallery-one-content-product">
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book1.jpg" alt="">
+                    <img src="/view/images1/book1.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Đắc Nhân Tâm </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1126,9 +1068,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book2.jpg" alt="">
+                    <img src="/view/images1/book2.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Trí Tuệ Do Thái </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1147,9 +1089,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book3.jpg" alt="">
+                    <img src="/view/images1/book3.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>WARREN BUFETT </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1168,9 +1110,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book4.jpg" alt="">
+                    <img src="/view/images1/book4.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Dương Hồng </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1189,9 +1131,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book5.jpg" alt="">
+                    <img src="/view/images1/book5.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Nguyễn Nhật Ánh </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1210,9 +1152,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book6.jpg" alt="">
+                    <img src="/view/images1/book6.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>DORAEMON </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1231,9 +1173,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book7.jpg" alt="">
+                    <img src="/view/images1/book7.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>CONAN </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1252,9 +1194,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book8.jpg" alt="">
+                    <img src="/view/images1/book8.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Trạng Quỳnh </li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1273,9 +1215,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book9.jpg" alt="">
+                    <img src="/view/images1/book9.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Nguyễn Nhật Ánh</li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1294,9 +1236,9 @@
 
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book10.jpg" alt="">
+                    <img src="/view/images1/book10.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Nguyễn Nhật Ánh</li>
                         <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -1336,174 +1278,214 @@
             </div>
             <div class="product-gallery-one-content-product">
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book1.jpg" alt="">
+                    <img src="/view/images1/book1.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Đắc Nhân Tâm </li>
-                        <li>Tình trạng sách: 98%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book2.jpg" alt="">
+                    <img src="/view/images1/book2.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Trí Tuệ Do Thái </li>
-                        <li>Tình trạng sách: 95%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book3.jpg" alt="">
+                    <img src="/view/images1/book3.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>WARREN BUFETT </li>
-                        <li>Tình trạng sách: 90%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book4.jpg" alt="">
+                    <img src="/view/images1/book4.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Dương Hồng </li>
-                        <li>Tình trạng sách: 80%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book5.jpg" alt="">
+                    <img src="/view/images1/book5.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Nguyễn Nhật Ánh </li>
-                        <li>Tình trạng sách: 90%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book6.jpg" alt="">
+                    <img src="/view/images1/book6.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>DORAEMON </li>
-                        <li>Tình trạng sách: 99%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book7.jpg" alt="">
+                    <img src="/view/images1/book7.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>CONAN </li>
-                        <li>Tình trạng sách: 85%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book8.jpg" alt="">
+                    <img src="/view/images1/book8.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Trạng Quỳnh </li>
-                        <li>Tình trạng sách: 97%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book9.jpg" alt="">
+                    <img src="/view/images1/book9.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Nguyễn Nhật Ánh</li>
-                        <li>Tình trạng sách: 89%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
                 <div class="product-gallery-one-content-product-item">
-                    <img src="images/book10.jpg" alt="">
+                    <img src="/view/images1/book10.jpg" alt="">
                     <div class="product-gallery-one-content-product-item-text">
-                        <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+                        <li><img src="/view/images1/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
                         <li>Nguyễn Nhật Ánh</li>
-                        <li>Tình trạng sách: 90%</li>
+                        <li>online giá rẻ</li>
                         <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
                         <li>100.000<sup>đ</sup></li>
+                        <!-- <li>Quà 10.000<sup>đ</sup></li> -->
                         <li>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <!-- <i class="fas fa-star"></i> -->
                         </li>
                         <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button></li>
+
                     </div>
+
                 </div>
             </div>
         </div>
