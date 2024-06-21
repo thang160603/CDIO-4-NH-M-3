@@ -18,7 +18,7 @@ namespace CDIO_4._1.Areas.Admin
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "CDIO_4._1..Areas.Admin.Controllers" }
+                namespaces: new[] { "CDIO_4._1.Areas.Admin.Controllers" }
 
             );
         }
