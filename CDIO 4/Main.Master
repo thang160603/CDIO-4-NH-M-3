@@ -244,13 +244,11 @@
             <li><a href=""><i class="fas fa-bars"></i>Danh mục sản phẩm<i style="font-size: 25px"></i></a>
               <div class="submenu">
                 <ul>
-                  <li><a href="Book.aspx">Đồ Gia Dụng </a></li>
+                  <li><a href="view/home/book.html">Sách Các Loại </a></li>
+                  <li><a href="">Đồ Gia Dụng </a></li>
                   <li><a href="">Điện Thoại </a></li>
                   <li><a href="">Laptop</a></li>
                   <li><a href="">Phụ Kiện Điện Thoại </a></li>
-                  <li><a href="">Sách Giáo Khoa </a></li>
-                  <li><a href="">Sách Thiếu Nhi</a></li>
-                  <li><a href="">Sách Ngoại Ngữ</a></li>
                   <li><a href="">Giày&Dép</a></li>
                   
                 </ul>
