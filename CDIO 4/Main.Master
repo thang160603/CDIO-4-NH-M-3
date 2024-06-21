@@ -25,7 +25,7 @@
         </asp:ContentPlaceHolder>
         
   <header>
-    <img src="images/aaa.jpg" alt="">
+    <%--<img src="images/logo.png" alt="">--%>
   </header>
   <nav>
     <div class="container">
@@ -280,9 +280,9 @@
       </div>
       <div class="product-gallery-one-content-product">
         <div class="product-gallery-one-content-product-item">
-          <img src="images/book1.jpg" alt="">
+          <img src="images/12prm.jpg" alt="">
           <div class="product-gallery-one-content-product-item-text">
-            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li><img src="images/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
             <li>Iphone 12 Pro Max </li>
             <li>online giá rẻ</li>
             <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -301,9 +301,9 @@
   
         </div>
         <div class="product-gallery-one-content-product-item">
-          <img src="images/book2.jpg" alt="">
+          <img src="images/15prm.jpg" alt="">
           <div class="product-gallery-one-content-product-item-text">
-            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li><img src="images/logo2.png" alt=""><p>Hỗ trợ giảm giá</p></li>
             <li>Iphone 15 Pro Max  </li>
             <li>online giá rẻ</li>
             <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
@@ -322,10 +322,10 @@
   
         </div>
         <div class="product-gallery-one-content-product-item">
-          <img src="images/book3.jpg" alt="">
+          <img src="images/asp5.jpg" alt="">
           <div class="product-gallery-one-content-product-item-text">
-            <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
-            <li>WARREN BUFETT </li>
+            <li><img src="images/icon.jpg" alt=""><p>Hỗ trợ giảm giá</p></li>
+            <li>Laptop Acer Asprire 5 </li>
             <li>online giá rẻ</li>
             <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
             <li>100.000<sup>đ</sup></li>
@@ -343,10 +343,10 @@
   
         </div>
         <div class="product-gallery-one-content-product-item">
-          <img src="images/book4.jpg" alt="">
+          <img src="images/nitro5.jpg" alt="">
           <div class="product-gallery-one-content-product-item-text">
             <li><img src="images/icon1.webp" alt=""><p>Hỗ trợ giảm giá</p></li>
-            <li>Dương Hồng </li>
+            <li>Laptop Acer Nitro 5 16GB </li>
             <li>online giá rẻ</li>
             <li><a href="">120.000<sup>đ</sup></a> <span>-6%</span></li>
             <li>100.000<sup>đ</sup></li>

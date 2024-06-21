@@ -69,6 +69,13 @@
   <ItemGroup>
     <Content Include="Book.aspx" />
     <Content Include="css\main.css" />
+    <Content Include="images\12prm.jpg" />
+    <Content Include="images\15prm.jpg" />
+    <Content Include="images\asp5.jpg" />
+    <Content Include="images\icon.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\nitro5.jpg" />
     <Content Include="javascript\main.js" />
     <Content Include="login.aspx" />
     <Content Include="Register.aspx" />
