@@ -87,6 +87,16 @@
     <Content Include="view\images1\12prm.jpg" />
     <Content Include="view\images1\15prm.jpg" />
     <Content Include="view\images1\asp5.jpg" />
+    <Content Include="view\images1\book1.jpg" />
+    <Content Include="view\images1\book10.jpg" />
+    <Content Include="view\images1\book2.jpg" />
+    <Content Include="view\images1\book3.jpg" />
+    <Content Include="view\images1\book4.jpg" />
+    <Content Include="view\images1\book5.jpg" />
+    <Content Include="view\images1\book6.jpg" />
+    <Content Include="view\images1\book7.jpg" />
+    <Content Include="view\images1\book8.jpg" />
+    <Content Include="view\images1\book9.jpg" />
     <Content Include="view\images1\icon.jpg" />
     <Content Include="view\images1\logo.png" />
     <Content Include="view\images1\nitro5.jpg" />
@@ -126,6 +136,7 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <None Include="packages.config" />
+    <Content Include="view\images1\icon1.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -133,9 +144,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\images1\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
