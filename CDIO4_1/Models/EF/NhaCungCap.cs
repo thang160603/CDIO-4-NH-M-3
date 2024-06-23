@@ -9,6 +9,8 @@ namespace CDIO_4._1.Models.EF
     [Table("nha_cung_cap")]
     public class NhaCungCap
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_nhap_kho { get; set; }
         public int ma_san_pham { get; set; }
         public int ma_nha_cung_cap { get; set; }
