@@ -9,6 +9,8 @@ namespace CDIO_4._1.Models.EF
     [Table("nhap_kho")]
     public class NhapKho
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_nhap_kho { get; set; }
         public int ma_san_pham { get; set; }
         public int ma_nha_cung_cap { get; set; }
