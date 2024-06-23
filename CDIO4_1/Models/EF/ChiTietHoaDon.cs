@@ -9,6 +9,8 @@ namespace CDIO_4._1.Models.EF
     [Table("chi_tiet_hoa_don")]
     public class ChiTietHoaDon
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_chi_tiet_hoa_don { get; set; }
         public int ma_don_hang { get; set; }
         public int ma_san_pham { get; set; }
