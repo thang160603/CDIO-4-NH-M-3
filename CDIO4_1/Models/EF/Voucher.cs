@@ -9,6 +9,8 @@ namespace CDIO_4._1.Models.EF
     [Table("voucher")]
     public class Voucher
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_voucher { get; set; }
         public int ma_nguoi_dung { get; set; }
         public string ten_voucher { get; set; }
