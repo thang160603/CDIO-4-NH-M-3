@@ -9,6 +9,8 @@ namespace CDIO_4._1.Models.EF
     [Table("danh_muc")]
     public class DanhMuc
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_danh_muc { get; set; }
         public string ten_danh_muc { get; set; }
 
