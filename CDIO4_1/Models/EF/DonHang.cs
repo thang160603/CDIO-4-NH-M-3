@@ -9,6 +9,8 @@ namespace CDIO_4._1.Models.EF
     [Table("don_hang")]
     public class DonHang
     {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_don_hang { get; set; }
         public int ma_nguoi_dung { get; set; }
         public DateTime ngay_dat { get; set; }
