@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace CDIO_4._1.Models.EF
+namespace CDIO4_1.Models.EF
 {
     [Table("chi_tiet_hoa_don_nhap")]
     public class ChiTietHoaDonNhap
@@ -17,6 +17,8 @@ namespace CDIO_4._1.Models.EF
         public int so_luong { get; set; }
         public decimal thanh_tien { get; set; }
         public decimal don_gia { get; set; }
+        public virtual SanPham SanPham { get; set; }
+        public virtual NhapKho NhapKho { get; set; }
 
     }
 }

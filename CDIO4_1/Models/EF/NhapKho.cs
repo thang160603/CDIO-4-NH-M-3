@@ -4,11 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace CDIO_4._1.Models.EF
+namespace CDIO4_1.Models.EF
 {
     [Table("nhap_kho")]
     public class NhapKho
     {
+        public NhapKho()
+        {
+            this.ChiTietHoaDonNhaps = new HashSet<ChiTietHoaDonNhap>();
+        }
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_nhap_kho { get; set; }
@@ -16,6 +20,8 @@ namespace CDIO_4._1.Models.EF
         public int ma_nha_cung_cap { get; set; }
         public int so_luong { get; set; }
         public DateTime ngay_nhap { get; set; }
-            
+        public virtual NhaCungCap NhaCungCap { get; set; }
+        public virtual ICollection<ChiTietHoaDonNhap> ChiTietHoaDonNhaps { get; set; }
+
     }
 }

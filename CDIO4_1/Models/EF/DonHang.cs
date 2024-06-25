@@ -4,11 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace CDIO_4._1.Models.EF
+namespace CDIO4_1.Models.EF
 {
     [Table("don_hang")]
     public class DonHang
     {
+        public DonHang()
+        {
+            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
+        }
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_don_hang { get; set; }
@@ -20,6 +24,11 @@ namespace CDIO_4._1.Models.EF
         public string Phuong_thuc_thanh_toan { get; set; }
         public int ma_danh_gia { get; set; }
         public int ma_vocucher { get; set; }
+        public virtual Voucher Voucher { get; set; }
+        public virtual VanChuyen VanChuyen { get; set; }
+        public virtual NguoiDung NguoiDung { get; set; }
+        public virtual DanhGia DanhGia { get; set; }
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
 
 
 

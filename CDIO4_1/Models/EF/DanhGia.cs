@@ -4,11 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace CDIO_4._1.Models.EF
+namespace CDIO4_1.Models.EF
 {
     [Table("danh_gia")]
     public class DanhGia
     {
+        public DanhGia()
+        {
+            this.donHang = new HashSet<DonHang>();
+        }
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ma_danh_gia { get; set; }
@@ -17,6 +21,6 @@ namespace CDIO_4._1.Models.EF
         public string noi_dung  { get; set; }
         public int diem { get; set; }
         public DateTime ngay_danh_gia { get; set; }
-
+        public virtual ICollection<DonHang> donHang { get; set; }
     }
 }
