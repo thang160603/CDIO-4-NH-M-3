@@ -96,6 +96,7 @@
     <Content Include="login.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="trangchu.aspx" />
+    <Content Include="view\chucnang\DangSP.html" />
     <Content Include="view\danhmuc\book.html" />
     <Content Include="view\danhmuc\dogiadung.html" />
     <Content Include="view\danhmuc\Laptop.html" />
