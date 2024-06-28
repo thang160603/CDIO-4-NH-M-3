@@ -68,12 +68,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\main.css" />
-    <Content Include="images\12prm.jpg" />
+    <Content Include="images\14prm.jpg" />
+    <Content Include="images\15plus.jpg" />
     <Content Include="images\15prm.jpg" />
+    <Content Include="images\15pro.jpg" />
     <Content Include="images\asp5.jpg" />
+    <Content Include="images\book1.jpg" />
+    <Content Include="images\book10.jpg" />
+    <Content Include="images\book2.jpg" />
+    <Content Include="images\book3.jpg" />
+    <Content Include="images\book4.jpg" />
+    <Content Include="images\book5.jpg" />
+    <Content Include="images\book6.jpg" />
+    <Content Include="images\book7.jpg" />
+    <Content Include="images\book8.jpg" />
+    <Content Include="images\book9.jpg" />
     <Content Include="images\icon.jpg" />
+    <Content Include="images\ip13.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\nitro5.jpg" />
+    <Content Include="images\rmnote13.jpg" />
+    <Content Include="images\ssm54.jpg" />
+    <Content Include="images\sss24.jpg" />
+    <Content Include="images\ssse23.jpg" />
+    <Content Include="images\xiaomi14.jpg" />
     <Content Include="javascript\main.js" />
     <Content Include="login.aspx" />
     <Content Include="Register.aspx" />
@@ -84,9 +102,16 @@
     <Content Include="view\danhmuc\phone.html" />
     <Content Include="view\danhmuc\Phukien.html" />
     <Content Include="view\danhmuc\shoes.html" />
-    <Content Include="view\images1\12prm.jpg" />
+    <Content Include="view\images1\14prm.jpg" />
+    <Content Include="view\images1\15plus.jpg" />
+    <Content Include="view\images1\15pmnt1.jpg" />
     <Content Include="view\images1\15prm.jpg" />
-    <Content Include="view\images1\asp5.jpg" />
+    <Content Include="view\images1\15pro.jpg" />
+    <Content Include="view\images1\bepdien-ava.jpg" />
+    <Content Include="view\images1\bepdien-hafele.jpg" />
+    <Content Include="view\images1\bepdien-kaff.jpg" />
+    <Content Include="view\images1\bepdien-rapido.jpg" />
+    <Content Include="view\images1\biepdien-media.jpg" />
     <Content Include="view\images1\book1.jpg" />
     <Content Include="view\images1\book10.jpg" />
     <Content Include="view\images1\book2.jpg" />
@@ -98,8 +123,20 @@
     <Content Include="view\images1\book8.jpg" />
     <Content Include="view\images1\book9.jpg" />
     <Content Include="view\images1\icon.jpg" />
+    <Content Include="view\images1\ip13.jpg" />
     <Content Include="view\images1\logo.png" />
-    <Content Include="view\images1\nitro5.jpg" />
+    <Content Include="view\images1\quatdieuhoa-ava.jpg" />
+    <Content Include="view\images1\quatdieuhoa-dmax.jpg" />
+    <Content Include="view\images1\quatdieuhoa-kagaroo.jpg" />
+    <Content Include="view\images1\quatdung-toshiba.jpg" />
+    <Content Include="view\images1\quatlung-seiko.jpg" />
+    <Content Include="view\images1\quatsan-asia.jpg" />
+    <Content Include="view\images1\quattreo-senko.jpg" />
+    <Content Include="view\images1\rmnote13.jpg" />
+    <Content Include="view\images1\ssm54.jpg" />
+    <Content Include="view\images1\sss24.jpg" />
+    <Content Include="view\images1\ssse23.jpg" />
+    <Content Include="view\images1\xiaomi14.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
